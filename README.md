@@ -1,2 +1,2 @@
-# trabajoFinal1cuatrimestre
-Mario Lindner
+# trabajoFinal1cuatrimestres
+Mario  L. Lindner
