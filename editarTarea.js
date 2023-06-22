@@ -7,7 +7,7 @@ function handleSubmit(event) {
 
     // Muestra los datos ingresados por consola
     console.log("Nombre:", name);
-    console.log("Email:", email);
+    console.log("Email:", email); 
 }
 
 var form = document.getElementById("myForm");
