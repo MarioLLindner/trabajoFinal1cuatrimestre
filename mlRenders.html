@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Renderizacion ML</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./editarTarea.js"></script>
+	<link rel="stylesheet" href="editarTarea.css">
+</head>
+
+<body>
+
+	<div class="logoytitulo">
+		<div class="logo">
+			<img class="imagenlogo" src="../imagenes/Logo1.png" alt="Logo" title="Logo">
+		</div>
+		<div class="nombre">
+			<h1>Renderizacion Fotorealista ML</h1>
+			<p class="intro">Un lugar donde podes ver el futuro de tu construccion/modificacion de su vivienda o
+				trabajo.</p>
+		</div>
+	</div>
+
+	<div class="navegacion">
+		<a href="#">Inicio</a>
+		<a href="#seccion1">Diseños</a>
+		<a href="#texto">Codigo QR</a>
+		<a href="https://es.wikipedia.org/wiki/Renderizaci%C3%B3n">Que es la renderizacion?</a>
+	</div>
+
+	<div class="secciones">
+		<div>
+			<div>
+				<h2 id="seccion1">Interiores</h2>
+			</div>
+			<div class="imgInt">
+				<img src="./imagenes/COCINA_SMT-01-POST.jpg" alt="Imagen 1">
+			</div>
+		</div>
+		<div>
+			<div>
+				<h2 id="seccion2">Exteriores</h2>
+			</div>
+			<div class="imgExt">
+				<img src="./imagenes/RENDER00.jpg" alt="Imagen2">
+			</div>
+		</div>
+		<div>
+			<div>
+				<h2 id="seccion3">Fotomontajes</h2>
+			</div>
+			<div class="imgFot">
+				<img src="./imagenes/Esqueje.jpg" alt="Imagen3">
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Formulario -->
+	<form id="myForm">
+		<label for="name">Nombre:</label>
+		<input type="text" id="name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" required>
+
+		<button type="submit">Enviar</button>
+	</form>
+
+	<div class="texto">
+		<h3>Pueden escanear este QR para ver mas imagenes</h3>
+		<img class="codigoqr" src="../imagenes/qrcode-generado.png" alt="Codigo QR" title="qr" />
+	</div>
+	<div>
+		<a id="whatsapp" title="WhatsApp" href="https://wa.me/542284577325?text=" target="_blank">
+			<img src="https://cdn.jsdelivr.net/gh/persano/MaximusWebFonts@1.8.5.6.5/iconos-svg/whatsapp_logo.svg"
+				loading="lazy" alt="WhatsApp Logo"></a>
+	</div>
+</body>
+
+</html>
