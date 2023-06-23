@@ -99,7 +99,6 @@ p {
 	}
 }
 
-/* Estilos para la galería de imágenes */
 .secciones {
 	display: flex;
 	flex-wrap: wrap;
@@ -108,22 +107,47 @@ p {
 	background-color: #E1ECC8;
 }
 
+.interior {
+	border-width: 5px;
+  	border-style: solid;
+ 	background-color: #A0C49D;
+	margin: 10px;
+	border-color: #A0C49D;
+}
+
 .imgInt img {
-	width: 500px;
-	height: 500px;
+	width: 1200px;
+	height: 800px;
 	object-fit: cover;
 	margin: 10px;
+	
+}
+
+.exterior {
+	border-width: 5px;
+  	border-style: solid;
+ 	background-color: #A0C49D;
+	margin: 10px;
+	border-color: #A0C49D;
 }
 
 .imgExt img {
-	width: 500px;
-	height: 500px;
+	width: 1200px;
+	height: 800px;
 	object-fit: cover;
 	margin: 10px;
 }
 
+.fotomontajes {
+	border-width: 5px;
+  	border-style: solid;
+ 	background-color: #A0C49D;
+	margin: 10px;
+	border-color: #A0C49D;
+}
+
 .imgFot img {
-	width: 500px;
+	width: 1200px;
 	height: 500px;
 	object-fit: cover;
 	margin: 10px;
