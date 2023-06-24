@@ -121,7 +121,7 @@ p {
 	border-color: #A0C49D;
 }
 
-.imgInt img {
+.imgInt {
 	width: 1200px;
 	height: 800px;
 	object-fit: cover;
@@ -137,7 +137,7 @@ p {
 	border-color: #A0C49D;
 }
 
-.imgExt img {
+.imgExt {
 	width: 1200px;
 	height: 800px;
 	object-fit: cover;
