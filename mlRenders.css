@@ -1,7 +1,6 @@
 h1 {
 
 	color: #F7FFE5;
-	text-align: center;
 	font-family: 'Arial Narrow Bold', sans-serif;
 	font-style: italic;
 	text-size-adjust: none;
@@ -38,24 +37,29 @@ p {
 
 .nombre {
 	flex-flow: row wrap;
-}
-
-@media (max-width:700px) and (min-width:500px) {
-	.nombre {
-		font-size: 9px;
-	}
+	display: flex;
+	flex-direction: column;
 }
 
 .intro {
-	flex-flow: row wrap;
+	flex-wrap: nowrap;
 	color: #F7FFE5;
+	display: flex;
 }
 
 @media (max-width:700px) and (min-width:500px) {
-	.intro {
-		font-size: 15px;
+	.titulo {
+		font-size: 20px;
 	}
 }
+
+@media (max-width: 1030px) and (min-width:500px) {
+	.intro {
+		font-size: 13px
+	}
+}
+
+
 
 .navegacion {
 	display: flex;
@@ -65,7 +69,9 @@ p {
 	margin: 0;
 	background: #C4D7B2;
 	border-radius: 10px;
-}
+  	position: sticky;
+  	top: 0;
+	}
 
 .navegacion a {
 	text-decoration: none;
@@ -160,17 +166,4 @@ p {
 	z-index: 999999;
 	width: 80px;
 	height: auto;
-}
-
-.texto {
-    background-color: transparent;
-    height: 500px;
-    width: 360px;
-
-}
-
-.codigoqr {
-    width: 250px;
-    display: block;
-    margin: 0 auto;
 }
