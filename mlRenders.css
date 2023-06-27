@@ -59,8 +59,6 @@ p {
 	}
 }
 
-
-
 .navegacion {
 	display: flex;
 	flex-flow: row wrap;
@@ -71,6 +69,7 @@ p {
 	border-radius: 10px;
   	position: sticky;
   	top: 0;
+	  z-index:10
 	}
 
 .navegacion a {
@@ -150,6 +149,9 @@ p {
  	background-color: #A0C49D;
 	margin: 10px;
 	border-color: #A0C49D;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .imgFot img {
@@ -157,6 +159,8 @@ p {
 	height: 500px;
 	object-fit: cover;
 	margin: 10px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #whatsapp img {
@@ -166,4 +170,39 @@ p {
 	z-index: 999999;
 	width: 80px;
 	height: auto;
+}
+
+
+.to-do-list {
+	background-color: #E1ECC8;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form-select {
+	background-color: #A0C49D;
+	margin: 5px;
+	padding: 5px;
+	color: #000000;
+}
+
+.tarea {
+	background-color: #A0C49D;
+	margin: 5px;
+	padding: 5px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.tarea div {
+	padding: 2px;
+	margin: 2px;
+}
+
+.cargar-Tarea {
+	border: solid 2px #A0C49D;
+	margin: 5px;
+	padding: 5px;
+	max-height: 50px;
 }

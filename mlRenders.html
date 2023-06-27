@@ -8,12 +8,10 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
-	<script type="text/javascript" src="./mlRenders.js"></script>
 	<link rel="stylesheet" href="./mlRenders.css">
 </head>
 
 <body>
-
 	<div class="logoytitulo">
 		<div class="logo">
 			<img class="imagenlogo" src="../imagenes/Logo1.png" alt="Logo" title="Logo">
@@ -24,7 +22,6 @@
 				trabajo.</p>
 		</div>
 	</div>
-
 	<div class="navegacion ">
 		<a href="#">Inicio</a>
 		<a href="#seccion1">Interiores</a>
@@ -32,7 +29,6 @@
 		<a href="#seccion3">Fotomontajes</a>
 		<a href="https://es.wikipedia.org/wiki/Renderizaci%C3%B3n">Que es la renderizacion?</a>
 	</div>
-
 	<div class="secciones">
 		<div class="interior">
 			<div>
@@ -119,6 +115,40 @@
 			</div>
 		</div>
 	</div>
+	<div class="to-do-list">
+		<p>Debajo les dejo sugerencias de los elementos necesarios para comenzar a trabajar los cuales deben agregar en el apartado inferior</p>
+		<select class="form-select" aria-label="Default select example">
+			<option selected>Modelado:</option>
+			<option value="1">3D</option>
+			<option value="2">2D</option>
+			<option value="3">No Poseo</option>
+		  </select>
+		  <select class="form-select" aria-label="Default select example">
+			<option selected>Renderizado para:</option>
+			<option value="1">Carteleria</option>
+			<option value="2">Presentacion</option>
+			<option value="3">Indiferente</option>
+		  </select>
+		  <select class="form-select" aria-label="Default select example">
+			<option selected>Decoracion</option>
+			<option value="1">A gusto del diseñador</option>
+			<option value="2">Ya esta definido</option>
+			<option value="3">Indiferente</option>
+		  </select>
+		  <select class="form-select" aria-label="Default select example">
+			<option selected>Tiempo de Entrega</option>
+			<option value="1">1 semana</option>
+			<option value="2">1 mes</option>
+			<option value="3">Urgente</option>
+		  </select>
+		<div class="cargar-Tarea">
+			<input type="text" id="input" />
+			<button id="btn-cargar">Cargar tarea</button>
+		</div>
+		<div id="lista">
+			<p>No hay tareas</p>
+		</div>
+	</div>
 	<div>
 		<a id="whatsapp" title="WhatsApp" href="https://wa.me/542284577325?text=" target="_blank">
 			<img src="https://cdn.jsdelivr.net/gh/persano/MaximusWebFonts@1.8.5.6.5/iconos-svg/whatsapp_logo.svg"
@@ -133,6 +163,7 @@
 
 		<button type="submit">Enviar</button>
 	</form>
+	<script type="text/javascript" src="./mlRenders.js"></script>
 </body>
 
 </html>
