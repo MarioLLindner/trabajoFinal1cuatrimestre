@@ -8,7 +8,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./mlRenders.css">
+	<link rel="stylesheet" href="./mlrenders.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 		</div>
 		<div class="nombre">
 			<h1 class="titulo">Renderizacion Fotorealista ML</h1>
-			<p class="intro">Un lugar donde podes ver el futuro de tu construccion/modificacion de su vivienda o
+			<p class="intro">Un lugar donde podes ver el futuro de tu construccion o modificacion de su vivienda o
 				trabajo.</p>
 		</div>
 	</div>
@@ -116,37 +116,36 @@
 		</div>
 	</div>
 	<div class="to-do-list">
-		<p>Debajo les dejo sugerencias de los elementos necesarios para comenzar a trabajar los cuales deben agregar en el apartado inferior</p>
-		<select class="form-select" aria-label="Default select example">
+		<p>Debajo les dejo los elementos necesarios para comenzar a trabajar los cuales deben agregar en el apartado inferior</p>
+		<select class="form-select" id="select1" aria-label="Default select example">
 			<option selected>Modelado:</option>
-			<option value="1">3D</option>
-			<option value="2">2D</option>
-			<option value="3">No Poseo</option>
-		  </select>
-		  <select class="form-select" aria-label="Default select example">
+			<option value="3D">3D</option>
+			<option value="2D">2D</option>
+			<option value="No Poseo">No Poseo</option>
+		</select>
+		<select class="form-select" id="select2" aria-label="Default select example">
 			<option selected>Renderizado para:</option>
-			<option value="1">Carteleria</option>
-			<option value="2">Presentacion</option>
-			<option value="3">Indiferente</option>
-		  </select>
-		  <select class="form-select" aria-label="Default select example">
+			<option value="Carteleria">Carteleria</option>
+			<option value="Presentacion">Presentacion</option>
+			<option value="Indiferente">Indiferente</option>
+		</select>
+		<select class="form-select" id="select3" aria-label="Default select example">
 			<option selected>Decoracion</option>
-			<option value="1">A gusto del diseñador</option>
-			<option value="2">Ya esta definido</option>
-			<option value="3">Indiferente</option>
-		  </select>
-		  <select class="form-select" aria-label="Default select example">
+			<option value="A gusto del diseñador">A gusto del diseñador</option>
+			<option value="Ya esta definido">Ya esta definido</option>
+			<option value="Indiferente">Indiferente</option>
+		</select>
+		<select class="form-select" id="select4" aria-label="Default select example">
 			<option selected>Tiempo de Entrega</option>
-			<option value="1">1 semana</option>
-			<option value="2">1 mes</option>
-			<option value="3">Urgente</option>
-		  </select>
+			<option value="1 semana">1 semana</option>
+			<option value="1 mes">1 mes</option>
+			<option value="Urgente">Urgente</option>
+		</select>
 		<div class="cargar-Tarea">
-			<input type="text" id="input" />
-			<button id="btn-cargar">Cargar tarea</button>
+			<button id="btn-cargar">Cargar Elementos</button>
 		</div>
-		<div id="lista">
-			<p>No hay tareas</p>
+		<div id="listado">
+			<p>No hay Elementos</p>
 		</div>
 	</div>
 	<div>
@@ -154,16 +153,14 @@
 			<img src="https://cdn.jsdelivr.net/gh/persano/MaximusWebFonts@1.8.5.6.5/iconos-svg/whatsapp_logo.svg"
 				loading="lazy" alt="WhatsApp Logo"></a>
 	</div>
-	<form id="myForm">
-		<label for="nombre">Nombre:</label>
-		<input type="text" id="nombre" required>
-
-		<label for="email">Email:</label>
-		<input type="email" id="email" required>
-
-		<button type="submit">Enviar</button>
+	<form class="form" id="form">
+		<input id="nombre" class="form-control" type="text" />
+            <small id="error-nombre" class="mensaje-error"></small>
+		<input id="email" class="form-control" type="email" />
+			<small id="error-email" class="mensaje-error"></small>
+			<button id="enviar-btn" type="button" class="btn btn-outline-success">Enviar Solicitud</button>
 	</form>
-	<script type="text/javascript" src="./mlRenders.js"></script>
+	<script type="text/javascript" src="./mlrenders.js"></script>
 </body>
 
 </html>

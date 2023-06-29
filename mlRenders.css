@@ -7,6 +7,11 @@ h1 {
 	text-size-adjust: auto;
 }
 
+h2 {
+	color: #F7FFE5;
+	padding-left: 5px;
+}
+
 h3 {
     color: rgb(0, 0, 0);
     text-align: justify;
@@ -42,20 +47,20 @@ p {
 }
 
 .intro {
-	flex-wrap: nowrap;
-	color: #F7FFE5;
 	display: flex;
+	flex-wrap: wrap;
+	color: #F7FFE5;
 }
 
-@media (max-width:700px) and (min-width:500px) {
+@media (max-width:768px)  {
 	.titulo {
-		font-size: 20px;
+		font-size: 17px;
 	}
 }
 
-@media (max-width: 1030px) and (min-width:500px) {
+@media (max-width: 1030px)  {
 	.intro {
-		font-size: 13px
+		font-size: 12px
 	}
 }
 
@@ -69,7 +74,7 @@ p {
 	border-radius: 10px;
   	position: sticky;
   	top: 0;
-	  z-index:10
+	z-index:10
 	}
 
 .navegacion a {
@@ -80,7 +85,7 @@ p {
 }
 
 .navegacion a:hover {
-	background: #6BF492;
+	background: #A0C49D;
 	border-radius: 10px;
 }
 
@@ -113,61 +118,67 @@ p {
 }
 
 .interior {
-	border-width: 5px;
-  	border-style: solid;
  	background-color: #A0C49D;
 	margin: 10px;
-	border-color: #A0C49D;
 }
 
 .imgInt {
-	width: 1200px;
-	height: 800px;
+	width: 95%;
+	height: auto;
 	object-fit: cover;
 	margin: 10px;
-	
+	max-width: 900px;
+}
+
+@media (max-width: 768px) {
+	.imgInt {
+		width: 95%;
+		height: auto;
+	}
+
+	.imgExt {
+		width: 95%;
+		height: auto;
+	}
+
+	.imgFot {
+		width: 95%;
+		height: auto;
+	}																																																
 }
 
 .exterior {
-	border-width: 5px;
-  	border-style: solid;
  	background-color: #A0C49D;
 	margin: 10px;
-	border-color: #A0C49D;
+	max-width: 900px;
 }
 
 .imgExt {
-	width: 1200px;
-	height: 800px;
+	width: 95%;
+	height: auto;
 	object-fit: cover;
 	margin: 10px;
 }
 
 .fotomontajes {
-	border-width: 5px;
-  	border-style: solid;
  	background-color: #A0C49D;
 	margin: 10px;
-	border-color: #A0C49D;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	max-width: 900px;	
 }
 
 .imgFot img {
-	width: 1200px;
-	height: 500px;
+	width: 95%;
+	height: auto;
 	object-fit: cover;
 	margin: 10px;
-	display: flex;
-	flex-wrap: wrap;
+
 }
 
 #whatsapp img {
 	position: fixed;
 	bottom: 12px;
 	right: 12px;
-	z-index: 999999;
+	z-index: 10;
 	width: 80px;
 	height: auto;
 }
@@ -177,6 +188,7 @@ p {
 	background-color: #E1ECC8;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .form-select {
@@ -184,6 +196,7 @@ p {
 	margin: 5px;
 	padding: 5px;
 	color: #000000;
+	max-width: 450px;
 }
 
 .tarea {
@@ -193,6 +206,7 @@ p {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	max-width: 450px;
 }
 
 .tarea div {
@@ -205,4 +219,40 @@ p {
 	margin: 5px;
 	padding: 5px;
 	max-height: 50px;
+	max-width: 155px;
 }
+
+.to-do-list p {
+	background-color: #A0C49D;
+	margin: 5px;
+	padding: 5px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 15px;
+	color: #F7FFE5;
+	max-width: 900px;
+	border-radius: 5px;
+}
+
+.form {
+	background-color: #A0C49D;
+	padding: 5px;
+}
+
+.imput {
+	border-radius: 5px;
+
+}
+
+.form-control {
+	max-width: 450px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.btn {
+	border: solid 2px black;
+	padding: 5px;
+	margin: 5px;
+	background-color: gainsboro;
+}
+
