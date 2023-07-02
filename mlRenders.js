@@ -1,14 +1,18 @@
+
 //Declaro un arrary para guardar las tareas y un ID para asignarle a cada tarea
 let array = [];
 let id = 1;
 //Creo una funcion para obtener el valor de cada selector y guardarlo en un array
 function tareas() {
-    const tarea1 = document.getElementById('select1').value;
-    const tarea2 = document.getElementById('select2').value;
-    const tarea3 = document.getElementById('select3').value;
-    const tarea4 = document.getElementById('select4').value;
-    let array1 = [tarea1, tarea2, tarea3, tarea4];
-    return array1;
+    const tarea1 = "Modelado: " + document.getElementById('select1').value;
+    const tarea2 = "Renderizado para: " + document.getElementById('select2').value;
+    const tarea3 = "Decoracion: " + document.getElementById('select3').value;
+    const tarea4 = "Tiempo de entrega: " + document.getElementById('select4').value;
+    document.getElementById("select1").options.selectedIndex=0
+    document.getElementById("select2").options.selectedIndex=0
+    document.getElementById("select3").options.selectedIndex=0
+    document.getElementById("select4").options.selectedIndex=0
+    return [tarea1, tarea2, tarea3, tarea4];
 }
 //A travez del btn-cargar obtengo el valor del array retornado de tareas() y agrego la tarea al array principal, incremento el ID para la sig tarea y muestro la lista actualizada
 const cargar = document.getElementById('btn-cargar');
@@ -137,11 +141,3 @@ const inicializarJs = () => {
 }
 
 window.addEventListener('load', inicializarJs);
-
-
-
-
-
-
-
-
