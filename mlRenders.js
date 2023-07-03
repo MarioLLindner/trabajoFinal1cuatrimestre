@@ -1,4 +1,3 @@
-
 //Declaro un arrary para guardar las tareas y un ID para asignarle a cada tarea
 let array = [];
 let id = 1;
@@ -8,10 +7,10 @@ function tareas() {
     const tarea2 = "Renderizado para: " + document.getElementById('select2').value;
     const tarea3 = "Decoracion: " + document.getElementById('select3').value;
     const tarea4 = "Tiempo de entrega: " + document.getElementById('select4').value;
-    document.getElementById("select1").options.selectedIndex=0
-    document.getElementById("select2").options.selectedIndex=0
-    document.getElementById("select3").options.selectedIndex=0
-    document.getElementById("select4").options.selectedIndex=0
+    document.getElementById("select1").options.selectedIndex = 0
+    document.getElementById("select2").options.selectedIndex = 0
+    document.getElementById("select3").options.selectedIndex = 0
+    document.getElementById("select4").options.selectedIndex = 0
     return [tarea1, tarea2, tarea3, tarea4];
 }
 //A travez del btn-cargar obtengo el valor del array retornado de tareas() y agrego la tarea al array principal, incremento el ID para la sig tarea y muestro la lista actualizada
@@ -48,12 +47,56 @@ const mostrarLista = () => {
         <div>
           <button data-id=${tarea.id} class="btn-${tarea.isComplete ? 'eliminar' : 'completar'}">${tarea.isComplete ? 'Finalizado' : 'Completar tarea'}</button>
         </div>
+        <form class="form" id="form-${tarea.id}">
+            <input id="nombre-${tarea.id}" class="form-control" type="text" placeholder="Nombre" />
+            <small id="error-nombre-${tarea.id}" class="mensaje-error"></small>
+            <input id="email-${tarea.id}" class="form-control" type="email" placeholder="Email" />
+            <small id="error-email-${tarea.id}" class="mensaje-error"></small>
+            <button id="enviar-btn-${tarea.id}" type="button" class="btn btn-outline-success">Enviar Solicitud</button>
+          </form>
+        </div>
       </div>
-    </div>
     `;
     });
-    const listado = document.getElementById('listado');//obtengo el elemento html donde se mostrara la lista
-    listado.innerHTML = str;//actualizo el contenido con la lista generada
+    const listado = document.getElementById('listado'); //obtengo el elemento html donde se mostrara la lista
+    listado.innerHTML = str; //actualizo el contenido con la lista generada
+
+    array.forEach((tarea) => { //Guardo los valores de el form de la tarea
+        const enviarBtn = document.getElementById(`enviar-btn-${tarea.id}`);
+        const nombreInput = document.getElementById(`nombre-${tarea.id}`);
+        const emailInput = document.getElementById(`email-${tarea.id}`);
+        const errorNombre = document.getElementById(`error-nombre-${tarea.id}`);
+        const errorEmail = document.getElementById(`error-email-${tarea.id}`);
+
+        enviarBtn.addEventListener('click', () => {
+            // Obtener los valores ingresados
+            const nombre = nombreInput.value.trim();
+            const email = emailInput.value.trim();
+            console.log(nombre);
+            console.log(email);
+
+            // Resetear mensajes de error
+            errorNombre.textContent = '';
+            errorEmail.textContent = '';
+
+            // Validar nombre y email
+            if (nombre === '') {
+                errorNombre.textContent = 'El nombre es requerido.';
+                return;
+            }
+
+            if (email === '') {
+                errorEmail.textContent = 'El email es requerido.';
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                errorEmail.textContent = 'El email no es válido.';
+                return;
+            }
+            alert(`Solicitud enviada: Nombre: ${nombre}, Email: ${email}`);
+        });
+    });
     const btnComplete = document.querySelectorAll('.btn-completar');//Obtiene todos los botones de completar tarea
     btnComplete.forEach((btn) => {
         btn.addEventListener('click', (e) => completarTarea(btn));// Asigna el evento de completar tarea a cada botón
@@ -66,6 +109,11 @@ const mostrarLista = () => {
 
 mostrarLista();
 
+function isValidEmail(email) {
+    // Utiliza una expresión regular para validar el formato del email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 
 const esEmailValido = (email) => {
     const emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
@@ -80,7 +128,7 @@ const validarNombre = () => {
         nombreInput.classList.add('is-invalid');
     } else if (nombreInput.value.trim().length < 2) {
         // error de minLength
-        document.getElementById('error-nombre').innerHTML = "El nombre debe tener al menos 5 caracteres";
+        document.getElementById('error-nombre').innerHTML = "El nombre debe tener al menos 3 caracteres";
         nombreInput.classList.add('is-invalid');
     } else {
         document.getElementById('error-nombre').innerHTML = "";
@@ -98,7 +146,7 @@ const enviarFormulario = () => {
         formularioCorrecto = false;
     } else if (nombreInput.value.trim().length < 2) {
         // error de minLength
-        document.getElementById('error-nombre').innerHTML = "El nombre debe tener al menos 5 caracteres";
+        document.getElementById('error-nombre').innerHTML = "El nombre debe tener al menos 3 caracteres";
         formularioCorrecto = false;
     } else {
         document.getElementById('error-nombre').innerHTML = "";
@@ -124,7 +172,6 @@ const enviarFormulario = () => {
     } else {
         console.log("Formulario incorrecto")
     }
-
 }
 
 
