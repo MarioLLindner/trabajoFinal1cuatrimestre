@@ -45,7 +45,7 @@ const mostrarLista = () => {
       </div>
       <div>
         <div>
-          <button data-id=${tarea.id} class="btn-${tarea.isComplete ? 'eliminar' : 'completar'}">${tarea.isComplete ? 'Finalizado' : 'Completar tarea'}</button>
+          <button data-id=${tarea.id} class="btn-${tarea.isComplete ? 'eliminar' : 'completar'}">${tarea.isComplete ? 'Eliminar tarea' : 'Completar tarea'}</button>
         </div>
         <form class="form" id="form-${tarea.id}">
             <input id="nombre-${tarea.id}" class="form-control" type="text" placeholder="Nombre" />
